@@ -1,0 +1,15 @@
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (12, '赵六3', '2022-08-19', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1001, '李1', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1002, '李2', '2022-08-18', '女');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1003, '李3', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1004, '李4', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1005, '李5', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1006, '李6', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1007, '李7', '2022-08-18', '女');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1008, '李8', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1009, '李9', '2022-08-18', '女');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1010, '李10', '2022-08-18', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1011, '赵六3', '2022-08-19', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1012, '许志威', '2000-05-02', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1013, '许志威2', '2000-05-02', '男');
+INSERT INTO `student`(`s_no`, `s_name`, `birthday`, `sex`) VALUES (1014, '许志威1', '2000-05-02', '男');

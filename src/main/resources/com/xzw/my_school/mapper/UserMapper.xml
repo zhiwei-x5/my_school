@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xzw.my_school.mapper.UserMapper">
+    <!--添加老师信息-->
+    <insert id="addUserByTeacher">
+        insert  into  teacher values(#{tId},#{tSubject},#{tName})
+    </insert>
+    <!--添加学生信息-->
+    <insert id="addUserByStudent">
+        insert  into  student values(#{sNo},#{sName},#{birthday},#{sex})
+    </insert>
+    <!--添加课程信息-->
+    <insert id="addUserByClass">
+        insert  into  class values(null,#{tid},#{sid})
+    </insert>
+
+    <!--删除老师-->
+    <delete id="delUserByTeacher">
+        delete  from teacher where #{name}=t_name
+    </delete>
+    <!--根据class中老师id删除与teacher对应id的老师-->
+    <delete id="delUserByClassTeacher">
+        delete  from class where #{tid}=t_id
+    </delete>
+
+    <!--查询所有学生的总数-->
+    <select id="selUserByStudent" resultType="int">
+        select count(*) from class where s_id=#{sno}
+    </select>
+    <select id="selUserByTeacher" resultType="java.lang.Integer">
+        select count(*) from class where t_id=#{tid}
+    </select>
+    <select id="selUserByStudent_repetition" resultType="java.lang.Integer">
+        select count(*) from student where s_name=#{name}
+    </select>
+    <select id="selUserByTeacherName" resultType="java.lang.Integer">
+        select t_id from teacher where t_name=#{name}
+    </select>
+    <select id="selUserByClassTeacherId" resultType="java.lang.Integer">
+        select count(*) from class where t_id=#{tid}
+    </select>
+    <select id="selUserByAllstudent" resultType="Student">
+        select * from student
+    </select>
+
+    <!-- 按照老师来查询学生-->
+    <select id="selUserByAllstudent_teacher" resultType="com.xzw.my_school.pojo.Student">
+        select s_no,s_name,birthday,sex
+        from student,class,teacher
+        where class.t_id=#{tid} and student.s_no=class.s_id and class.t_id=teacher.t_id
+    </select>
+
+
+</mapper>
